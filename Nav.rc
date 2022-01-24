@@ -1,0 +1,1177 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""res\\Nav.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  \t// Standard components\r\n"
+    "#include ""afxprint.rc""\t// printing/print preview resources\r\n"
+    "#include ""afxdb.rc""\t\t// Database resources\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Nav.ico"
+IDR_NAVTYPE             ICON    DISCARDABLE     "res\\Navdoc.ico"
+IDR_NAVPLAN             ICON    DISCARDABLE     "res\\idr_navp.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\toolbar.bmp"
+IDB_FLIGHTPLANIMAGELIST BITMAP  DISCARDABLE     "res\\flightpl.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        POPUP "&Add to scenery list"
+        BEGIN
+            MENUITEM "&New",                        ID_FILE_ADDTOSCENERYLIST_NEW
+
+            MENUITEM SEPARATOR
+            MENUITEM "N&av.lst",                    ID_FILE_ADDTOSCENERYLIST_NAVLST
+
+        END
+        POPUP "S&earch for BGL files"
+        BEGIN
+            MENUITEM "&New",                        ID_FILE_SEARCHFORBGLFILES_NEW
+
+            MENUITEM SEPARATOR
+            MENUITEM "N&av.lst",                    ID_FILE_SEARCHFORBGLFILES_NAVLST
+
+        END
+        POPUP "&Load scenery list"
+        BEGIN
+            MENUITEM "N&av.lst",                    ID_FILE_LOADSCENERYLIST_NAVLST
+
+        END
+        MENUITEM "&Save compiled scenery list", ID_FILE_SAVECOMPILEDSCENERYLIST
+
+        MENUITEM "&Delete compiled scenery list", 
+                                                ID_FILE_DELETECOMPILEDSCENERYLIST
+
+        MENUITEM "Start &with last scenery list", ID_FILE_STARTWITHLASTLIST
+        MENUITEM SEPARATOR
+        MENUITEM "E&xtract FS2000 waypoints and routes...", 
+                                                ID_FILE_EXTRACTFS2000WAYPOINTSANDROUTES
+
+        MENUITEM "&Export to Flight Shop...",   ID_FILE_EXPORT_FLIGHTSHOP
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Settings"
+    BEGIN
+        MENUITEM "Save &Options",               ID_EDIT_SAVEOPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Map"
+    BEGIN
+        MENUITEM "Start with &Last View",       ID_MAP_STARTWITHLASTVIEW
+        MENUITEM "Zoom &In",                    ID_VIEW_ZOOMIN
+        MENUITEM "Zoom &Out",                   ID_VIEW_ZOOMOUT
+        MENUITEM "Zoom &To Fit",                ID_MAP_ZOOMTOFIT
+        MENUITEM "&Center at...",               ID_MAP_CENTERAT
+        MENUITEM SEPARATOR
+        POPUP "&Show"
+        BEGIN
+            MENUITEM "&Grid Lines",                 ID_VIEW_GRIDLINES
+            MENUITEM "&VOR",                        ID_VIEW_VOR
+            MENUITEM "I&LS",                        ID_VIEW_ILS
+            MENUITEM "&NDB",                        ID_VIEW_NDB
+            MENUITEM "&Airports",                   ID_VIEW_AIRPORTS
+            MENUITEM "&Markers",                    ID_VIEW_MARKERS
+            MENUITEM "A&TIS",                       ID_MAP_ATIS
+            MENUITEM "Wa&ypoints",                  ID_VIEW_WAYPOINTS
+            MENUITEM "&Routes",                     ID_VIEW_ROUTES
+            MENUITEM SEPARATOR
+            MENUITEM "Simple Map Fil&es",           ID_MAP_SHOW_MAPS
+            MENUITEM "Fan&cy Map Files",            ID_MAP_SHOW_FANCYMAPS
+            MENUITEM "Fancy Map Options....",       ID_SET_FANCYMAP_OPTIONS
+            MENUITEM SEPARATOR
+            MENUITEM "I&D",                         ID_VIEW_ID
+            MENUITEM "&Frequency",                  ID_VIEW_FREQUENCY
+            MENUITEM SEPARATOR
+            POPUP "Flight &Plan"
+            BEGIN
+                MENUITEM "&Plan Data Only",             ID_MAP_SHOW_PLANDATAONLY
+
+                MENUITEM "Pla&n Information",           ID_MAP_SHOW_PLANINFORMATION
+
+            END
+            POPUP "Map &Symbols"
+            BEGIN
+                MENUITEM "Large &Symbols",              ID_MAP_LARGESYMBOLS
+                MENUITEM "Set &Transition... ",         ID_MAP_SETTRANSITION
+                MENUITEM "Airport Zones",               ID_MAP_SHOW_MAPSYMBOLS_AIRPORTZONES
+
+            END
+            MENUITEM "Flat &World",                 ID_VIEW_FLATWORLD
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "D&atabase...",                ID_VIEW_DATABASE
+        MENUITEM "Searc&h...",                  ID_VIEW_SEARCH
+        POPUP "&Flight Track"
+        BEGIN
+            MENUITEM "&Import Flight Track...",     ID_FILE_IMPORT
+            MENUITEM "&Clear Flight Track",         ID_MAP_CLEARFLIGHTTRACK
+            MENUITEM "&Set Flight Track Density...", 
+                                                    ID_MAP_SETFLIGHTTRACKDENSITY
+
+        END
+        MENUITEM "Insert &GPS Fix",             ID_MAP_INSERTGPSFIX
+        MENUITEM SEPARATOR
+        MENUITEM "&Set Title...",               ID_EDIT_SETTITLE
+        MENUITEM "Change &Font...",             ID_EDIT_CHANGEFONT
+    END
+    POPUP "&Plan"
+    BEGIN
+        MENUITEM "&Flight Plan...",             ID_EDIT_FLIGHTPLAN
+        MENUITEM "Plan &Options...",            ID_PLAN_PLANOPTIONS
+    END
+    POPUP "F&lightSim"
+    BEGIN
+        MENUITEM "&FlightSim Link Options...",  ID_FS6_FS6LINKOPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Link",                       ID_FS6_LINK
+        MENUITEM "&Move To",                    ID_FS6_SET
+        POPUP "Map Follows Aircraft"
+        BEGIN
+            MENUITEM "&None",                       ID_FLIGHTSIM_MAPFOLLOWSAIRCRAFT_NONE
+
+            MENUITEM "&Local",                      ID_FLIGHTSIM_MAPFOLLOWSAIRCRAFT_LOCAL
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Fly &To Map Center",          ID_FS6_FLYTO
+        POPUP "Fly To &Plan Waypoint"
+        BEGIN
+            MENUITEM "&None",                       ID_PLAN0
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&View Documentation",         ID_HELPVIEWDOCS
+        MENUITEM "&About Nav...",               ID_APP_ABOUT
+    END
+END
+
+IDR_PLANMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "New",                         ID_FILE_NEW
+        MENUITEM "&Open...",                    ID_FILE_OPEN
+        MENUITEM "&Save...",                    ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        POPUP "Import"
+        BEGIN
+            MENUITEM "Import from old Nav 1.x format...", 
+                                                    ID_FILE_IMPORTFROMOLDNAV1X
+
+            MENUITEM "Import from Super &Flight Planner...", 
+                                                    ID_FILE_IMPORT_IMPORTFROMSUPERFLIGHTPLANNER
+
+            MENUITEM "Import from Flight Simulator &2000...", 
+                                                    ID_FILE_IMPORTFROMFLIGHTSIMULATOR2000
+
+        END
+        POPUP "Export"
+        BEGIN
+            MENUITEM "&Export to Text...",          ID_FILE_EXPORT
+            MENUITEM "E&xport to SquawkBox...",     ID_FILE_EXPORTSQUAWKBOX
+            MENUITEM "Export to &ACS-GPS...",       ID_FILE_EXPORT_ACSGPS
+            MENUITEM "Export to Super &Flight Planner...", 
+                                                    ID_FILE_EXPORTSUPERFLIGHTPLANNER
+
+            MENUITEM "Export to Radar Contact &99...", 
+                                                    ID_FILE_EXPORTTORADARCONTACT99
+
+            MENUITEM "Export to Flight Simulator &2000...", 
+                                                    ID_FILE_EXPORTTOFLIGHTSIMULATOR2000
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Print",                      ID_FILE_PRINT
+    END
+    MENUITEM "&Aircraft...",                ID_AIRCRAFT
+    MENUITEM "&Options...",                 ID_OPTIONS
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 217, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Nav"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Nav version 3.0",IDC_STATIC,41,7,119,8
+    LTEXT           "Copyright © Ted Wright",IDC_STATIC,41,15,119,8
+    DEFPUSHBUTTON   "OK",IDOK,175,4,32,14,WS_GROUP
+    EDITTEXT        IDC_TIMESTAMP,41,39,114,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    LTEXT           "http://www.en.com/users/wright/Nav.shtml",IDC_STATIC,41,
+                    23,167,8
+END
+
+IDD_TITLE DIALOG DISCARDABLE  0, 0, 185, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Set Title"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_TITLE,6,23,173,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,39,54,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,54,50,14
+    LTEXT           "New title for page:",IDC_STATIC,10,10,76,8
+END
+
+IDD_DATABASE DIALOG DISCARDABLE  0, 0, 290, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,225,194,50,14
+    LISTBOX         IDC_LIST,3,2,284,189,LBS_SORT | LBS_USETABSTOPS | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Details",IDC_DETAILS,9,194,50,14
+    PUSHBUTTON      "Send to Plan",IDC_PLAN,63,194,50,14
+    PUSHBUTTON      "Center",IDC_CENTER,117,194,50,14
+    PUSHBUTTON      "Summarize",IDC_SUMMARY,171,194,50,14
+END
+
+IDD_SEARCH DIALOG DISCARDABLE  0, 0, 185, 53
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Search"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_TARGET,9,14,171,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,30,33,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,91,33,50,14
+    LTEXT           "Search for:",IDC_STATIC,9,4,69,8
+END
+
+IDD_FLIGHTPLAN DIALOGEX 0, 0, 373, 197
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Flight Plan"
+MENU IDR_PLANMENU
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Generic1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,0,3,369,177
+    PUSHBUTTON      "&Up",IDC_UP,3,182,40,14
+    PUSHBUTTON      "&Down",IDC_DOWN,44,182,40,14
+    PUSHBUTTON      "De&lete",IDC_DELETE,85,182,40,14
+    PUSHBUTTON      "C&lear all",IDC_CLEAR,126,182,40,14
+    PUSHBUTTON      "&Add",IDC_ADD,167,182,40,14
+    PUSHBUTTON      "Auto &route",IDC_AUTO,208,182,40,14
+    PUSHBUTTON      "&Wind",IDC_WIND,249,182,40,14
+    PUSHBUTTON      "&Fly To",IDC_FLYTOPLANBUTTON,290,182,40,14
+    PUSHBUTTON      "DP/&STAR",IDC_DPSTAR,331,182,40,14
+END
+
+IDD_DETAILS DIALOG DISCARDABLE  0, 0, 323, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Details"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,191,168,50,14
+    PUSHBUTTON      "Send to Plan",IDC_PLAN,75,168,50,14
+    PUSHBUTTON      "Center",IDC_CENTER,133,168,50,14
+    EDITTEXT        IDC_TEXT,0,0,322,165,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_OEMCONVERT | ES_READONLY | 
+                    ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_AUTO DIALOG DISCARDABLE  0, 0, 117, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Auto-route options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,5,81,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,60,81,50,14
+    EDITTEXT        IDC_IDEAL,5,15,40,13,ES_AUTOHSCROLL
+    CONTROL         "VORs",IDC_VOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    41,35,10
+    CONTROL         "NDBs",IDC_NDB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    51,35,10
+    CONTROL         "Airports",IDC_AIRPORTS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,55,41,35,10
+    CONTROL         "Waypoints",IDC_WAYPOINTS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,55,51,49,10
+    CONTROL         "Insert GPS fixes if necessary",IDC_CONTINUE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,68,105,10
+    GROUPBOX        "Route using",IDC_STATIC,5,30,101,35
+    LTEXT           "Ideal inter-station distance (nm):",IDC_STATIC,5,5,105,
+                    8
+END
+
+IDD_SEARCHBGL DIALOG DISCARDABLE  0, 0, 189, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Search for BGL files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_DRIVE,9,14,133,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Choose...",IDC_CHOOSE,145,15,39,12
+    CONTROL         "Recurse subdiectories",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,9,30,90,10
+    CONTROL         "Skip files without Nav-aids",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,9,42,120,10
+    CONTROL         "Search only AFD data files (needed for FS2000)",
+                    IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,54,
+                    174,10
+    DEFPUSHBUTTON   "OK",IDOK,35,70,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,70,50,14
+    LTEXT           "Drive and directory to search:",IDC_STATIC,9,5,115,8
+END
+
+IDD_EXPORT DIALOG DISCARDABLE  0, 0, 152, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export in Flight Shop format"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,21,58,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,58,50,14
+    EDITTEXT        IDC_CENTER,101,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STATE,101,24,40,14,ES_AUTOHSCROLL
+    CONTROL         "Column Headings",IDC_HEADINGS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,42,92,10
+    LTEXT           "Default State or Country:",IDC_STATIC,7,27,78,8
+    LTEXT           "Default ARTCC (""Center""):",IDC_STATIC,7,10,85,8
+END
+
+IDD_EXPORTPROGRESS DIALOG DISCARDABLE  0, 0, 186, 109
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export Progress"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,67,88,50,14
+    CONTROL         "Progress1",IDC_NAVAIDS,"msctls_progress32",WS_BORDER,7,
+                    17,172,14
+    CONTROL         "Progress1",IDC_RUNWAYS,"msctls_progress32",WS_BORDER,7,
+                    43,172,14
+    CONTROL         "Progress1",IDC_AIRPORTS,"msctls_progress32",WS_BORDER,7,
+                    69,172,14
+    LTEXT           "NDB, VOR:",IDC_STATIC,7,7,38,8
+    LTEXT           "Runways:",IDC_STATIC,7,33,32,8
+    LTEXT           "Airports:",IDC_STATIC,7,59,26,8
+END
+
+IDD_DENSITY DIALOG DISCARDABLE  0, 0, 187, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Flight Track Density"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,41,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,42,50,14
+    LTEXT           "Seconds between adjacent points in flight track display:",
+                    IDC_STATIC,7,7,176,8
+    EDITTEXT        IDC_DENSITY,72,20,40,14,ES_AUTOHSCROLL
+END
+
+IDD_SETTRANSITION DIALOG DISCARDABLE  0, 0, 134, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Transition"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,50,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,77,50,50,14
+    LTEXT           "Switch to larger symbols when\n magnification is greater than :",
+                    IDC_STATIC,7,7,113,19
+    EDITTEXT        IDC_TRANS,43,26,40,14,ES_AUTOHSCROLL
+END
+
+IDD_NEWLIST DIALOG DISCARDABLE  0, 0, 165, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create new scenery list"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_NAME,7,20,148,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,25,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,83,42,50,14
+    LTEXT           "Name:",IDC_STATIC,7,7,22,8
+END
+
+IDD_CENTERAT DIALOG DISCARDABLE  0, 0, 184, 177
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Center Map At"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,36,160,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,92,160,50,14
+    EDITTEXT        IDC_DDEGLAT,28,24,56,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DDEGLON,28,84,56,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LATD,136,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LATM,136,40,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LATS,136,56,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOND,136,84,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LONM,136,100,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LONS,136,116,40,14,ES_AUTOHSCROLL
+    CONTROL         "Use &decimal degrees",IDC_RADIODD,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,8,144,82,10
+    CONTROL         "Use D&MS degrees",IDC_RADIODMSD,"Button",
+                    BS_AUTORADIOBUTTON,100,144,74,10
+    GROUPBOX        "Decimal degrees",IDC_STATIC,4,4,84,132
+    GROUPBOX        "DMS degrees",IDC_STATIC,96,4,84,132
+    LTEXT           "Latitude:",IDC_STATIC,8,16,28,8
+    LTEXT           "Longitude:",IDC_STATIC,8,76,34,8
+    LTEXT           "Latitude:",IDC_STATIC,100,16,28,8
+    LTEXT           "Longitude:",IDC_STATIC,100,76,34,8
+    LTEXT           "degrees:",IDC_STATIC,104,28,28,8
+    LTEXT           "minutes:",IDC_STATIC,104,44,27,8
+    LTEXT           "seconds:",IDC_STATIC,104,60,30,8
+    LTEXT           "degrees:",IDC_STATIC,104,88,28,8
+    LTEXT           "minutes:",IDC_STATIC,104,104,27,8
+    LTEXT           "seconds:",IDC_STATIC,104,120,30,8
+END
+
+IDD_CRAFT DIALOG DISCARDABLE  0, 0, 227, 135
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+CAPTION "Aircraft Data"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,60,115,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,115,115,50,14
+    EDITTEXT        IDC_CA,125,85,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Load...",IDC_LOAD,135,5,40,14
+    PUSHBUTTON      "Save",IDC_SAVE,181,5,40,14
+    EDITTEXT        IDC_CRAFT,25,5,105,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_US,75,40,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CS,125,40,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DS,175,40,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_UF,75,55,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CF,125,55,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DF,175,55,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_UR,75,70,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DR,175,70,40,14,ES_AUTOHSCROLL
+    LTEXT           "Craft:",IDC_STATIC,5,10,18,8
+    GROUPBOX        "Cruise",IDC_STATIC,120,30,50,75
+    GROUPBOX        "Climb",IDC_STATIC,70,30,50,75
+    GROUPBOX        "Descent",IDC_STATIC,170,30,50,75
+    LTEXT           "Speed (kts):",IDC_STATIC,25,45,39,8
+    LTEXT           "Fuel Consumption:",IDC_STATIC,5,60,59,8
+    LTEXT           "Rate (fpm):",IDC_STATIC,30,75,36,8
+    LTEXT           "Altitude (ft):",IDC_STATIC,30,90,36,8
+END
+
+IDD_LOADAIRCRAFT DIALOG DISCARDABLE  0, 0, 186, 108
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Load Aircraft"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,87,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,96,87,50,14
+    LISTBOX         IDC_CRAFT,7,7,172,80,LBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_WIND DIALOG DISCARDABLE  0, 0, 117, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Wind"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,5,55,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,60,55,50,14
+    EDITTEXT        IDC_SPEED,51,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DIRECTION,51,20,40,14,ES_AUTOHSCROLL
+    RTEXT           "Speed:",IDC_STATIC,21,10,24,8
+    RTEXT           "Direction:",IDC_STATIC,15,23,31,8
+    CONTROL         "&Set all waypoints",IDC_GLOBAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,20,40,69,10
+END
+
+IDD_LINKOPTIONS DIALOG DISCARDABLE  0, 0, 158, 105
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Flight Simulator Link Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,24,84,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,84,50,14
+    RTEXT           "Seconds between map updates:",IDC_STATIC,6,6,108,8
+    EDITTEXT        IDC_UPDATE,115,3,36,14,ES_AUTOHSCROLL
+    RTEXT           "Seconds between Fly-To updates:",IDC_STATIC,6,22,108,8
+    EDITTEXT        IDC_FLYUPDATE,115,19,36,14,ES_AUTOHSCROLL
+    CONTROL         "Fly-To enables autopilot heading hold",IDC_SETNAVMODE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,36,132,10
+    CONTROL         "Enable network connectivity",IDC_ENABLENETWORK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,50,132,10
+    EDITTEXT        IDC_CALLSIGN,87,63,64,14,ES_AUTOHSCROLL
+    RTEXT           "Callsign for link displays:",IDC_STATIC,6,65,80,8
+END
+
+IDD_MAPOPTIONS DIALOG DISCARDABLE  0, 0, 344, 255
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Map Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,300,240,38,14
+    EDITTEXT        IDC_DECIMATION,215,240,24,14,ES_AUTOHSCROLL
+    CONTROL         "&Show All",IDC_SHOWALL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,245,245,43,10
+    PUSHBUTTON      "Demarcated or delimited boundary",IDC_IPB1,10,10,156,12
+    PUSHBUTTON      "Indefinite or in Dispute",IDC_IPB2,10,25,156,12
+    PUSHBUTTON      "Other line of separation of sovreignty on land",
+                    IDC_IPB3,10,40,156,12
+    PUSHBUTTON      "Demarcated or delimited boundary",IDC_NPB1,180,10,156,
+                    12
+    PUSHBUTTON      "Indefinite or in Dispute",IDC_NPB2,180,25,156,12
+    PUSHBUTTON      "Other line of separation of sovreignty on land",
+                    IDC_NPB3,180,40,156,12
+    PUSHBUTTON      "Coast, islands and lakes that appear on all maps",
+                    IDC_CIL1,10,70,156,12
+    PUSHBUTTON      "Additional major islands and lakes",IDC_CIL2,10,85,156,
+                    12
+    PUSHBUTTON      "Intermediate islands and lakes",IDC_CIL3,10,100,156,12
+    PUSHBUTTON      "Minor islands and lakes",IDC_CIL4,10,115,156,12
+    PUSHBUTTON      "Intermittent major lakes",IDC_CIL6,10,130,156,12
+    PUSHBUTTON      "Intermittent minor lakes",IDC_CIL7,10,145,156,12
+    PUSHBUTTON      "Reefs",IDC_CIL8,10,160,156,12
+    PUSHBUTTON      "Salt pans -- major",IDC_CIL9,10,175,156,12
+    PUSHBUTTON      "Salt pans -- minor",IDC_CIL10,10,190,156,12
+    PUSHBUTTON      "Ice Shelves -- major",IDC_CIL13,10,205,156,12
+    PUSHBUTTON      "Ice Shelves -- minor",IDC_CIL14,10,220,156,12
+    PUSHBUTTON      "Glaciers",IDC_CIL15,10,235,156,12
+    PUSHBUTTON      "Permanent major rivers",IDC_RIV1,180,70,156,12
+    PUSHBUTTON      "Additional major rivers",IDC_RIV2,180,85,156,12
+    PUSHBUTTON      "Additional rivers",IDC_RIV3,180,100,156,12
+    PUSHBUTTON      "Minor rivers",IDC_RIV4,180,115,156,12
+    PUSHBUTTON      "Double lined rivers",IDC_RIV5,180,130,156,12
+    PUSHBUTTON      "Intermittent rivers -- major",IDC_RIV6,180,145,156,12
+    PUSHBUTTON      "Intermittent rivers -- additional",IDC_RIV7,180,160,156,
+                    12
+    PUSHBUTTON      "Intermittent rivers -- minor",IDC_RIV8,180,175,156,12
+    PUSHBUTTON      "Major canals",IDC_RIV10,180,190,156,12
+    PUSHBUTTON      "Canals of lesser importance",IDC_RIV11,180,205,156,12
+    PUSHBUTTON      "Canals -- irrigation type",IDC_RIV12,180,220,156,12
+    GROUPBOX        "International Political Boundaries",IDC_STATIC,5,0,165,
+                    55
+    GROUPBOX        "National Political Boundaries",IDC_STATIC,176,0,164,55
+    GROUPBOX        "Coasts, Islands and Lakes",IDC_STATIC,5,60,165,190
+    GROUPBOX        "Rivers",IDC_STATIC,176,60,164,175
+    LTEXT           "&Decimation:",IDC_STATIC,175,244,38,8
+END
+
+IDD_SETMAPOPTIONS DIALOG DISCARDABLE  0, 0, 92, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Map Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,25,120,40,14
+    EDITTEXT        IDC_MAG,44,15,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RED,46,45,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GREEN,46,61,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BLUE,46,77,32,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Select",IDC_CHANGE,25,95,40,14
+    GROUPBOX        "Minimum Magnification",IDC_STATIC,4,4,81,28
+    GROUPBOX        "Color",IDC_STATIC,5,35,80,80
+    LTEXT           "Red:",IDC_STATIC,26,49,16,8
+    LTEXT           "Green:",IDC_STATIC,20,65,22,8
+    LTEXT           "Blue:",IDC_STATIC,25,81,17,8
+    LTEXT           "Zoom:",IDC_STATIC,20,19,21,8
+END
+
+IDD_INSERT_A_GPS_FIX DIALOGEX 0, 0, 242, 154
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Insert a GPS Fix From"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,94,135,58,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,135,50,14
+    EDITTEXT        IDC_INSERT_GPSFIX_HDG,38,81,36,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_HEADING,"msctls_updown32",UDS_WRAP | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,73,81,11,
+                    15
+    EDITTEXT        IDC_INSERT_GPSFIX_DISTANCE,39,98,35,15,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_DISTANCE,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,73,98,11,
+                    15
+    EDITTEXT        IDC_NAME,136,81,100,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ID,136,98,100,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Send to Plan",IDC_GPSFIX_INSERT,35,135,50,14
+    LTEXT           "Do you want to insert a GPS fix from:",IDC_STATIC,7,4,
+                    128,8
+    EDITTEXT        IDC_TEXT,7,15,229,62,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_OEMCONVERT | ES_READONLY | 
+                    ES_WANTRETURN | NOT WS_TABSTOP
+    LTEXT           "Heading :",IDC_STATIC,3,84,32,8,0,WS_EX_RIGHT
+    LTEXT           "Distance :",IDC_STATIC,2,101,33,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_GPSFIX_NEWLAT,45,120,72,10
+    LTEXT           "Static",IDC_GPSFIX_NEWLONG,124,120,72,10
+    LTEXT           "Static",IDC_HEADING_REVERSE,85,83,28,10
+    LTEXT           "Name:",IDC_STATIC,113,84,22,8
+    LTEXT           "ID:",IDC_STATIC,123,101,10,8
+END
+
+IDD_CREATEDPSTAR DIALOG DISCARDABLE  0, 0, 186, 57
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create a DP or STAR"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ROUTENAME,7,19,172,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,37,39,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,98,39,50,14
+    EDITTEXT        IDC_PROMPT,7,7,172,12,ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+END
+
+IDD_SELECTDPSTAR DIALOG DISCARDABLE  0, 0, 186, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select a DP or STAR"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,39,82,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,103,82,50,14
+    LISTBOX         IDC_LIST,7,4,172,75,LBS_SORT | LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_INSERTGPSFIX DIALOG DISCARDABLE  0, 0, 186, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Insert a GPS fix"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,68,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,42,50,14
+    EDITTEXT        IDC_NAME,41,7,138,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ID,41,23,138,14,ES_AUTOHSCROLL
+    LTEXT           "Fix Name:",IDC_STATIC,7,10,32,8
+    LTEXT           "Fix ID:",IDC_STATIC,16,27,23,8
+    PUSHBUTTON      "Send To Plan",ID_SENDTOPLAN,7,42,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "NAV MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "NAV\0"
+            VALUE "LegalCopyright", "Copyright © 1995\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "NAV.EXE\0"
+            VALUE "ProductName", "NAV Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_FLIGHTPLAN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 371
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 196
+    END
+
+    IDD_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_EXPORTPROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_DENSITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_SETTRANSITION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 127
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_NEWLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 155
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_CENTERAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_CRAFT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_LOADAIRCRAFT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_WIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 110
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_LINKOPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 151
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_CREATEDPSTAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_SELECTDPSTAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_INSERTGPSFIX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Nav\n\nNav\n(*.bgl)\n.bgl\nNav.Document\nScenery"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Nav"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new empty plan\nNew"
+    ID_FILE_OPEN            "Open a flight plan file\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save a flight plan file\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print a flight plan\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_ZOOMIN          "Zoom in on the map\nZoom in"
+    ID_VIEW_ZOOMOUT         "Zoom out on the map\n Zoom out"
+    ID_VIEW_GRIDLINES       "Show grid lines for latitude and longitude\nToggle grid display"
+    ID_FILE_ADDTOSCENERYLIST 
+                            "Add the currently opened file to the scenery list\nAdd to list"
+    ID_FILE_LOADSCENERYLIST "Load all the files in the scenery list\nLoad list"
+    ID_FILE_SEARCHFORFILESTOADDTOSCENERYLIST 
+                            "S&earch for files to add to scenery list\nSearch and add to list"
+    ID_FILE_ADD             "Add the currently opened file to the scenery list\nAdd to list"
+    ID_FILE_SEARCH          "Search the disk for files to add to the scenery list\nSearch and add to list"
+    ID_FILE_LOAD            "Load all the files in the scenery list\nLoad list"
+    ID_VIEW_VOR             "View VOR stations\nVOR display"
+    ID_VIEW_ILS             "View ILS stations\nILS display"
+    ID_VIEW_NDB             "View NDB stations\nNDB display"
+    ID_VIEW_AIRPORTS        "View Airports\nAirport display"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_NAVAIDID        "Show the station identifications\nID display"
+    ID_VIEW_NAVAIDFREQUENCY "Show the frequency of the stations\nFrequency display"
+    ID_VIEW_FREQUENCY       "Show the Navaid frequency\nFrequency display"
+    ID_VIEW_ID              "Show the Navaid ID\nID display"
+    ID_EDIT_CHANGEFONT      "Set the font used for display and printing"
+    ID_EDIT_SETTITLE        "Add or change the page title"
+    ID_VIEW_DETAILS         "View the details of currently displayed data"
+    ID_VIEW_SEARCH          "Search for something in the database\nSearch"
+    ID_VIEW_DATABASE        "View the details of the currently displayed data\nDatabase (of current view)"
+    ID_EDIT_SAVEOPTIONS     "Save the current view settings"
+    ID_VIEW_FLATWORLD       "Make the world flat instead of round"
+    ID_EDIT_FLIGHTPLAN      "Show the flight plan\nShow flight plan"
+    ID_PLAN_PLANOPTIONS     "Set flight plan routing and printing options"
+    ID_MAP_SHOW_PLANDATAONLY 
+                            "Map only the stations in the flight plan\nShow only flight plan data"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_MARKERS         "View inner, middle and outer markers\nMarker display"
+    ID_MAP_SHOW_PLANINFORMATION "Show headings and distances from flight plan"
+    ID_FILE_EXPORT          "Export a flight plan as a text file\nExport Text"
+    ID_FILE_IMPORT          "Import flight track data from fltrec file"
+    ID_MAP_FLIGHTTRACK_CLEARFLIGHTTRACK "Erase loaded flight track"
+    ID_MAP_CLEARFLIGHTTRACK "Erase the loaded flight track"
+    ID_MAP_FLIGHTTRACK_SETFLIGHTTRACKDENSITY 
+                            "Set how many seconds pass between the mapped points in the flight track"
+    ID_MAP_SETFLIGHTTRACKDENSITY 
+                            "Set how many seconds pass between the mapped flight track points"
+    ID_MAP_LARGESYMBOLS     "Use larger symbols in map display"
+    ID_MAP_SHOW_MAPSYMBOLS_SETTRANSITION 
+                            "Set the magnification where transition between very small and larger symbols occurs"
+    ID_MAP_SETTRANSITION    "Set the point where very small symbols are used instead of larger ones"
+    ID_MAP_ZOOMTOFIT        "Zoom in a far as possible and still see everything\n Zoom to fit"
+    ID_MAP_SHOW_MAPS        "View simple outline map files (if they exist)\nView Simple Maps"
+    ID_MAP_SHOW_MAPSYMBOLS_AIRPORTZONES "Show a grey area around airports"
+    ID_MAP_INSERTGPSFIX     "Insert a GPS fix (user defined reference point)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_LOADSCENERYLIST_NAVLST "Load BGL files from Nav.lst "
+    ID_FILE_ADDTOSCENERYLIST_NEW 
+                            "Add currently loaded file to a new scenery list"
+    ID_FILE_ADDTOSCENERYLIST_NAVLST "Add currently loaded file to Nav.lst"
+    ID_FILE_SEARCHFORBGLFILES_NEW 
+                            "Search for BGL files and add them to a new scenery list"
+    ID_FILE_SEARCHFORBGLFILES_NAVLST 
+                            "Search for BGL files and add them to Nav.lst"
+    ID_MAP_CENTERAT         "Center the map at a specific latitude and longitude"
+    ID_MAP_SHOW_ATIS        "View ATIS stations\nView ATIS"
+    ID_MAP_ATIS             "View ATIS stations\nATIS display"
+    ID_FS6_LINK             "Link map to aircraft position\nLink"
+    ID_FS6_SET              "Set aircraft position to map center\nMove To"
+    ID_FS6_FS6LINKOPTIONS   "Change options for the Nav-FS link\nFS Link Options"
+    ID_EDIT_MOVEUP          "Move the selected item up\nMove up"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_MOVEDOWN        "Move the selected item down\nMove down"
+    ID_EDIT_DELETE          "Delete the selected item\nDelete"
+    ID_EDIT_CLEARALL        "Delete all items in the plan\nClear All"
+    ID_EDIT_ADD             "Add a new item to the flight plan\nAdd"
+    ID_EDIT_AUTOROUTE       "Automatically generate a route to the selected item\nAuto Route"
+    ID_EDIT_WIND            "Change the wind settings\nWind"
+    ID_AIRCRAFT             "Change the aircraft characteristics\nAircraft"
+    ID_OPTIONS              "Change the auto-route settings\nOptions"
+    ID_FS6_FLYTO            "Set the aircraft's heading-hold autopilot to map location\nFly To Map Center"
+    ID_MENUITEM32841        "Look at the Nav Documentation"
+    ID_FILE_EXPORTSQUAWKBOX "Export a flight plan in SquawkBox format\nExport SquawkBox "
+    ID_MENUITEM32844        "View waypoints, intersection and routes\nWaypoint display"
+    ID_VIEW_WAYPOINTS       "View waypoints and intersections\nWaypoint display"
+    ID_VIEW_ROUTES          "View routes\nRoute display"
+    ID_MENUITEM32847        "View fancy map files (if they exist)\nView Fancy Maps"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MAP_SHOW_FANCYMAPS   "View fancy map files (if they exist)\nView Fancy Maps"
+    ID_SET_FANCYMAP_OPTIONS "Set the options for fancy map displays\nFancy Map Options"
+    ID_FS6_FLYTO_PLAN       "Set the autopilot to fly to the flight waypoint\nFly to plan waypoint"
+    ID_PLAN0                "Don't fly to any of the plan waypoints"
+    ID_FILE_SAVECOMPILEDSCENERYLIST 
+                            "Save the scenery list in a fast loading compiled format\nSave compiled scenery list"
+    ID_FILE_DELETECOMPILEDSCENERYLIST 
+                            "Delete the compiled scenery list so that data will be read from BGL files again\nDelete compiled scenery list"
+    ID_FILE_EXPORTSUPERFLIGHTPLANNER 
+                            "Export the plan in Super Flight Planner format\nExport Super Flight Planner"
+    ID_FILE_EXPORT_FLIGHTSHOP 
+                            "Export the Nav Aids in Flight Shop Format\nExport Flight Shop"
+    ID_FILE_EXPORTTORADARCONTACT99 
+                            "Export the plan in Radar Contact 99 format\nExport Radar Contact 99"
+    ID_FILE_IMPORT_IMPORTFROMSUPERFLIGHTPLANNER 
+                            "Import a flight plan from Super Flight Planner\nImport Super Flight Planner"
+    ID_FILE_IMPORTFROMOLDNAV1X 
+                            "Import a flight plan in the old Nav 1.x format\nImport from Nav 1.x"
+    ID_FILE_STARTWITHLASTLIST 
+                            "Start Nav with the last scenery list that was loaded\n Start with last scenery list"
+    ID_FILE_EXPORT_EXPORTTOACSGPS 
+                            "Export a flight plan in ACS-GPS format\nExport ACS-GPS "
+    ID_FILE_EXPORT_ACSGPS   "Export a flight plan in ACS-GPS format\nExport ACS-GPS"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_EXPORTTOFLIGHTSIMULATOR2000 
+                            "Export the plan in Flight Simulator 2000 format\nExport FS2000"
+    ID_FILE_IMPORTFROMFLIGHTSIMULATOR2000 
+                            "Import the plan from Flight Simulator 2000 format\nImport Export FS2000"
+    ID_FILE_EXTRACTFS2000WAYPOINTSANDROUTES 
+                            "Search FS2000 data to rebuild waypoint and route files\nRebuild waypoints and route files "
+    ID_MAP_STARTWITHLASTVIEW 
+                            "Start Nav next time zoomed and centered at the last locationfrom tis session\nStart with last view"
+    ID_FLIGHTSIM_MAPFOLLOWSAIRCRAFT_NONE 
+                            "Don't scroll the map to follow any aircraft"
+    ID_FLIGHTSIM_MAPFOLLOWSAIRCRAFT_LOCAL 
+                            "Maps scrolls to follow aircraft flying on this computer"
+    ID_FILE_SAVEASDPSTAR    "Save the current plan as a Departure Procedure or Standard Approach Route\n Save a DP or STAR"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\Nav.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  	// Standard components
+#include "afxprint.rc"	// printing/print preview resources
+#include "afxdb.rc"		// Database resources
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
